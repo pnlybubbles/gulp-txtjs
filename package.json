@@ -2,10 +2,12 @@
   "name": "gulp-txtjs",
   "version": "0.0.1",
   "description": "Text to js converter for gulp.",
+  "private": false,
   "main": "index.js",
   "scripts": {
     "test": "BABEL_ENV=test mocha --require babel-register test",
-    "build": "BABEL_ENV=production babel index.babel.js -o index.js"
+    "build": "BABEL_ENV=production babel index.babel.js -o index.js",
+    "prepublish": "npm run build"
   },
   "author": "pnlybubbles",
   "license": "MIT",
