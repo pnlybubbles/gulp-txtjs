@@ -51,7 +51,7 @@ export default 'hello world';
 Convert with `es5` option.
 
 ```javascript
-exports.default = 'hello world';
+module.exports = 'hello world';
 ```
 
 Exported js file will be added `.js` extension.  You can import the text file by specifying the path with file name including the extension. (ex: `import hello from 'hello.txt'`)
