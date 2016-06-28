@@ -16,7 +16,7 @@ module.exports = (options) => {
       if (options && options.target === 'es6') {
         content = new Buffer(`export default ${JSON.stringify(f.contents.toString('utf8'))};\n`);
       } else { // option.target === 'es5'
-        content = new Buffer(`exports.default = ${JSON.stringify(f.contents.toString('utf8'))};\n`);
+        content = new Buffer(`module.exports = ${JSON.stringify(f.contents.toString('utf8'))};\n`);
       }
       const output = new gutil.File({
         cwd: f.cwd,
