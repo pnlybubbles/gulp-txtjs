@@ -1,0 +1,17 @@
+{
+  "env": {
+    "production": {
+      "presets": [
+        "es2015"
+      ],
+    },
+    "test": {
+      "presets": [
+        "es2015"
+      ],
+      "plugins": [
+        "babel-plugin-espower"
+      ]
+    }
+  }
+}
