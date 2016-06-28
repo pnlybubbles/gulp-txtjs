@@ -1,7 +1,7 @@
 {
   "name": "gulp-txtjs",
   "description": "Text to js converter for gulp.",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "author": "pnlybubbles",
   "bugs": {
     "url": "https://github.com/pnlybubbles/gulp-txtjs/issues",

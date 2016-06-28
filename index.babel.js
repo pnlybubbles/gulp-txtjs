@@ -13,7 +13,7 @@ module.exports = (options) => {
         return cb(new gutil.PluginError(PLUGIN_NAME, 'file must be buffer.'));
       }
       let content;
-      if (options && options.target === 'es6') {
+      if (options && options.target.toLowerCase() === 'es6') {
         content = new Buffer(`export default ${JSON.stringify(f.contents.toString('utf8'))};\n`);
       } else { // option.target === 'es5'
         content = new Buffer(`module.exports = ${JSON.stringify(f.contents.toString('utf8'))};\n`);

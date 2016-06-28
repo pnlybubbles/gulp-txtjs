@@ -55,3 +55,15 @@ it('should convert with es6', (done) => {
   });
   stream.write(file);
 });
+
+it('should convert with es6 (option is case insensitive)', (done) => {
+  const contents = 'hello world\nnew line\n"double quote"';
+  const file = createFile('hello.txt', contents);
+  const stream = txtjs({target: 'ES6'});
+  stream.on('data', (f) => {
+    assert(f.path === path.join(__dirname, 'hello.txt.js'));
+    assert(f.contents.toString() === 'export default "hello world\\nnew line\\n\\"double quote\\"";\n');
+    done();
+  });
+  stream.write(file);
+});
