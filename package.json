@@ -1,16 +1,12 @@
 {
   "name": "gulp-txtjs",
-  "version": "0.0.1",
   "description": "Text to js converter for gulp.",
-  "private": false,
-  "main": "index.js",
-  "scripts": {
-    "test": "BABEL_ENV=test mocha --require babel-register test",
-    "build": "BABEL_ENV=production babel index.babel.js -o index.js",
-    "prepublish": "npm run build"
-  },
+  "version": "0.0.1",
   "author": "pnlybubbles",
-  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pnlybubbles/gulp-txtjs/issues",
+    "email": "pnlybubbles@gmail.com"
+  },
   "dependencies": {
     "gulp-util": "^3.0.7",
     "through2": "^2.0.1"
@@ -22,5 +18,17 @@
     "babel-register": "^6.9.0",
     "mocha": "^2.5.3",
     "power-assert": "^1.4.1"
+  },
+  "keywords": [
+    "gulpplugin"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "private": false,
+  "repository": "pnlybubbles/gulp-txtjs",
+  "scripts": {
+    "build": "BABEL_ENV=production babel index.babel.js -o index.js",
+    "prepublish": "npm run build",
+    "test": "BABEL_ENV=test mocha --require babel-register test"
   }
 }
