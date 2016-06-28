@@ -38,7 +38,7 @@ it('should convert with es5', (done) => {
   const stream = txtjs();
   stream.on('data', (f) => {
     assert(f.path === path.join(__dirname, 'hello.txt.js'));
-    assert(f.contents.toString() === 'exports.default = "hello world\\nnew line\\n\\"double quote\\"";\n');
+    assert(f.contents.toString() === 'module.exports = "hello world\\nnew line\\n\\"double quote\\"";\n');
     done();
   });
   stream.write(file);

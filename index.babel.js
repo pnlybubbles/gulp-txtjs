@@ -3,7 +3,7 @@ import through from 'through2';
 
 const PLUGIN_NAME = 'gulp-txtjs';
 
-export default (options) => {
+module.exports = (options) => {
   return through.obj((f, e, cb) => {
     try {
       if (f.isNull()) {
